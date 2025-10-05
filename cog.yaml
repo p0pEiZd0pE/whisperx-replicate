@@ -1,0 +1,13 @@
+build:
+  gpu: true
+  cuda: "11.8"
+  python_version: "3.10"
+  python_requirements:
+    - torch==2.1.0
+    - torchaudio==2.1.0
+    - whisperx==3.1.5
+    - faster-whisper==0.10.0
+  run:
+    - apt-get update && apt-get install -y ffmpeg
+
+predict: "predict.py:Predictor"
